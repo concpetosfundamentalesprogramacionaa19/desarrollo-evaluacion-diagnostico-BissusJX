@@ -1,0 +1,50 @@
+Algoritmo AutosImportados
+	Definir l,m,n,k,num como entero 
+	definir costo,impu,precio,totalImpu,totalPrecio como real
+	
+	Escribir "ingrese el numero de autos"
+	leer num
+	
+	Para i<-1 Hasta n Con Paso 1 Hacer
+		Escribir "numero de auto" ,i
+		Escribir "Ingrese la marca del auto"
+		leer marca
+		Escribir "ingrese el origen del auto"
+		leer origen
+		Escribir "Ingrese el costo del auto"
+		leer costo
+		Si origen=="Argentina"  Entonces
+			impu<-costo*0.2
+			precio<-costo + impu
+			l<-l+1
+		SiNo
+			Si origen=="Colombia" Entonces
+				impu<-costo*0.25
+				precio<-costo + impu
+				m<-m+1
+			SiNo
+				Si origen=="Chile" Entonces
+					impu<-costo*0.3
+					precio<-costo + impu
+					n<-n+1
+				SiNo
+					impu<-costo*0.4
+					precio<-costo + impu
+					k<-k+1
+				Fin Si
+			Fin Si
+			totalImpu<-totalImpu + impu
+			totalPrecio<-totalPrecio + precio
+			
+		Fin Para
+		Escribir "El total de autos importados es",num
+		Escribir "El total de impuestos generados es",impu
+		Escribir "El total de los precios de venta de los autos es ",totalPrecio
+		Escribir "El total de autos de Argentina es", l
+		Escribir "El total de autos de Colombia es", m
+		Escribir "El total de autos de Chile es", n
+		Escribir "El total de autos de otros paises son", k
+		
+	
+	
+FinAlgoritmo
